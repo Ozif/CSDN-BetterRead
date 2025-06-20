@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "CSDN沉浸式阅读",
+  "version": "1.0",
+  "description": "CSDN博客页面的内容会被隐藏，方便沉浸式阅读",
+  "action": {
+    "default_popup": "./popup/hello.html",
+    "default_icon": "./image/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://blog.csdn.net/*"
+      ]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
