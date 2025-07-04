@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSDN沉浸式阅读</title>
     <style>
         body {
             width: 300px;
             padding: 15px;
             font-family: Arial, sans-serif;
+            color: #333;
         }
         h1 {
-            color: #333;
             font-size: 18px;
             margin-bottom: 10px;
+            color: #333;
         }
-        p {
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+        .feature-list {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 5px;
+        }
+        .version {
+            font-size: 12px;
             color: #666;
-            font-size: 14px;
-            line-height: 1.5;
+            margin-top: 15px;
         }
     </style>
 </head>
-
 <body>
-    <h1>CSDN沉浸式阅读插件</h1>
-    <p>这个插件会自动隐藏CSDN博客页面的侧边栏、工具栏等干扰元素，让您专注于阅读内容。</p>
-    <p>功能特点：</p>
-    <ul>
-        <li>自动移除页面干扰元素</li>
+    <div class="logo">
+        <img src="../image/icon.svg" alt="CSDN沉浸式阅读">
+    </div>
+    
+    <h1>CSDN沉浸式阅读 <small>v1.1</small></h1>
+    
+    <p>一个让CSDN博客阅读体验更专注的Chrome扩展插件</p>
+    
+    <h2>功能特点</h2>
+    <ul class="feature-list">
+        <li>自动移除侧边栏、工具栏等干扰元素</li>
         <li>优化文章内容显示宽度</li>
-        <li>无需额外操作，打开页面即生效</li>
-        <li>方便调用浏览器打印（Ctrl+P）</li>
+        <li>支持浏览器打印功能(Ctrl+P)</li>
+        <li>访问CSDN博客页面即自动生效</li>
     </ul>
+    
+    <h2>V1.1新增功能</h2>
+    <ul class="feature-list">
+        <li>点击图标切换ON/OFF状态</li>
+        <li>记住上次的状态</li>
+        <li>快捷键Ctrl+B快速切换</li>
+        <li>把图标换成png（svg无法显示）</li>
+    </ul>
+    
+    <div class="version">
+        <p>当前版本: v1.1 (2025-07-04)</p>
+        <p>开发者: ozif</p>
+    </div>
 </body>
-
 </html>

@@ -1,0 +1,16 @@
+/* CSDN沉浸式阅读模式CSS样式 */
+/* 隐藏工具栏、侧边栏等干扰元素 */
+#toolbarBox,
+.blog_container_aside,
+.csdn-side-toolbar,
+#rightAside {
+  display: none !important;
+}
+
+/* 使文章内容全屏显示 */
+.blog-content-box {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100dvw !important;
+}

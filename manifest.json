@@ -1,19 +1,28 @@
 {
   "manifest_version": 3,
   "name": "CSDN沉浸式阅读",
-  "version": "1.0",
+  "version": "1.1",
   "description": "CSDN博客页面的内容会被隐藏，方便沉浸式阅读",
-  "action": {
-    "default_popup": "./popup/hello.html",
-    "default_icon": "./image/icon.svg"
+  "icons":{
+    "16": "./image/icon.png",
+    "48": "./image/icon.png",
+    "128": "./image/icon.png"
   },
-  "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://blog.csdn.net/*"
-      ]
+  "action": {
+    "default_icon": "./image/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
     }
-  ],
-  "permissions": ["activeTab"]
+  },
+  "host_permissions": ["https://blog.csdn.net/*"],
+  "permissions": ["activeTab", "scripting","tabs","storage"]
+  
 }
